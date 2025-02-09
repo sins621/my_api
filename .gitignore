@@ -169,4 +169,7 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
-github-md-to-html
+
+# deps
+github_md_to_html
+spotify_actions
