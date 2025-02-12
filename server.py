@@ -34,8 +34,9 @@ def spotify_action(fn):
     if request.args:
         uri = request.args.get("url")
         if uri:
+            function_output = getattr(spa, fn)()
             getattr(spa, fn)(uri)
-            return "Track Added to Que"
+            return jsonify(function_output)
     else:
         function_output = getattr(spa, fn)()
         if function_output:
