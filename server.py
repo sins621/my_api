@@ -12,6 +12,11 @@ app.config["CORS_HEADERS"] = "Content-Type"
 github_user = "sins621"
 github_repo = "Obsidian-Notes"
 
+@app.route("/hello")
+@cross_origin()
+def hello():
+    return "hello"
+
 
 @app.route("/gh/get_tree")
 @cross_origin()

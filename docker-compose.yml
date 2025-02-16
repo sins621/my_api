@@ -1,0 +1,16 @@
+version: "3.9"
+services:
+  web:
+    build: .
+    ports:
+      - "2000:2000"
+      - "3000:3000"
+    environment:
+      # Define any environment variables your Flask app needs here
+      # Example:
+      FLASK_APP: server.py
+      # FLASK_ENV: development
+      SPOTIFY_ID: 48c38a43fc6c4447bf0650798362372b
+      SPOTIFY_SECRET: b3942e646d164792a7f7ff7c37b037ca
+    volumes:
+      - .:/app  # Mounts your current directory into the container for code changes to reflect immediately during development

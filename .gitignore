@@ -173,3 +173,4 @@ cython_debug/
 # deps
 github_md_to_html
 spotify_actions
+.flaskenv
