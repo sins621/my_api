@@ -32,11 +32,8 @@ def get_file():
 def spotify_action(fn):
     print(fn)
     if request.args:
-        uri = request.args.get("url")
-        if uri:
-            function_output = getattr(spa, fn)()
-            getattr(spa, fn)(uri)
-            return jsonify(function_output)
+        function_output = getattr(spa, fn)(request.args)
+        return jsonify(function_output)
     else:
         function_output = getattr(spa, fn)()
         if function_output:
