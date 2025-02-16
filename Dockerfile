@@ -1,4 +1,4 @@
-FROM python:3.9-slim-buster  # Or your preferred Python version
+FROM python:3.9-slim-buster
 
 WORKDIR /app
 
@@ -7,7 +7,7 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
-EXPOSE 2000  # Flask default port
+EXPOSE 2000
 EXPOSE 3000
 
-CMD ["python", "server.py"] # Or your Flask application entry point
+CMD ["python", "server.py"]
